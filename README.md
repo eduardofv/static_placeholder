@@ -1,4 +1,4 @@
-# static-placeholder
+# static_placeholder
 
 A minimal "coming soon" placeholder page served by Python inside a Docker container.
 
@@ -13,7 +13,7 @@ A minimal "coming soon" placeholder page served by Python inside a Docker contai
 ## Build
 
 ```bash
-docker build -t placeholder .
+docker build -t static_placeholder .
 ```
 
 ## Run
@@ -22,13 +22,13 @@ Port is set via a command-line argument or the `PORT` environment variable. Defa
 
 ```bash
 # argument
-docker run -p 9000:9000 placeholder 9000
+docker run -p 9000:9000 static_placeholder 9000
 
 # environment variable
-docker run -e PORT=9000 -p 9000:9000 placeholder
+docker run -e PORT=9000 -p 9000:9000 static_placeholder
 
 # default port 8080
-docker run -p 8080:8080 placeholder
+docker run -p 8080:8080 static_placeholder
 ```
 
 The server binds to `0.0.0.0` and logs every request to stdout:
